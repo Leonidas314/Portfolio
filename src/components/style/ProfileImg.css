@@ -1,0 +1,14 @@
+.profileImg{
+    width: 10vw;
+    height: 10vw;
+    background-image: url(../../assets/profiledummy.png);
+    background-repeat: no-repeat;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    border-radius: var(--radius);
+
+
+}
