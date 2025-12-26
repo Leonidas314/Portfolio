@@ -1,5 +1,10 @@
+import '../style/imgContainer.css'
+import '../style/ProfileImg.css'
+import selfie from "../../assets/selfie.jpg"
 export default function ProfileImage(){
     return(
-        <div className="imgContainer"></div>
+        <div className="imgContainer">
+            <img src={selfie} className='profileImg' />
+        </div>
     )
 }

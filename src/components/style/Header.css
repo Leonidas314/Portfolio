@@ -3,4 +3,13 @@
     height: 40vh;
     background-color: black;
     color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+}
+.header-text{
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
