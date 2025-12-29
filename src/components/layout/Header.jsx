@@ -4,14 +4,11 @@ export default function Header(){
     return(
     <div className="Header">
         <div className='header-text'>
-            <h1>
-                 León Dellafiore
-            </h1>
-            <h2>
-                Analista en Computación
-            </h2>
+            <p>MY PROJECTS</p>
+            <p>ABOUT ME</p>
+            <p>SKILLS & KNOWLEDGES</p>
         </div> 
-        <ProfileImage/>
+        
     </div>
     );
 }

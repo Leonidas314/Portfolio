@@ -1,6 +1,7 @@
 .Body{
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: antiquewhite;
     flex: 1;
-    background-color: black;
 }

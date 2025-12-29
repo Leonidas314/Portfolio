@@ -1,10 +1,10 @@
 import '../style/Body.css'
+import About from './About';
 export default function Body(){
     return(
         <div className="Body">
-            <div className='about-container'><p>About Me</p></div>
-
-            <div className='project-container'><p>Project Container</p></div>
+            
+            <About/>
         </div>
     );
 }

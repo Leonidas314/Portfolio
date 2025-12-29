@@ -1,7 +1,6 @@
 .Header{
     width: 100vw;
-    height: 40vh;
-    background-color: black;
+    height: 20vh;
     color: antiquewhite;
     display: flex;
     flex-direction: row;
@@ -11,5 +10,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 3em;
 }
