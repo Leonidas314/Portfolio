@@ -1,0 +1,14 @@
+.project-card{
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    width: 20vw;
+    border: solid aliceblue 1px;
+}
+.project-card-img{
+     display: flex;
+    width: 12vw;
+    height:12vw;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
