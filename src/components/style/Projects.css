@@ -4,9 +4,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
-    width: 50vw;
-    border: solid antiquewhite 1px;
-    border-radius: 10px;
+    width: 100vw;
 }
 .project-card-container{
     display: flex;

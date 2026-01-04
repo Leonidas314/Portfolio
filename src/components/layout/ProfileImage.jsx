@@ -4,7 +4,7 @@ import selfie from "../../assets/selfie.jpg"
 export default function ProfileImage(){
     return(
         <div className="imgContainer">
-            <img src={selfie} className='profileImg' />
+            <img className="profile-image" src={selfie} />
         </div>
     )
 }
