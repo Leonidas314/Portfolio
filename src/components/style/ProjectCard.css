@@ -1,9 +1,35 @@
 .project-card{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    height: 20vh;
-    width: 20vw;
+    height: 30vh;
+    width: 35vw;
     border: solid aliceblue 1px;
+    border-radius: 15px;
+    box-shadow: -9px 9px 10px 1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -9px 9px 10px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -9px 9px 10px 1px rgba(0,0,0,0.75);
+}
+.project-card > *{
+    display: flex;
+}
+.title{
+    margin-top: 1em;
+    justify-content: center;
+}
+.project-description{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1em;
+    font-size: 1.2em;
+    font-weight: 200;
+}
+.project-card-body {
+  flex: 1;             
+  display: flex;
+  justify-content: center;
+  align-items: center;    
 }
 .project-card-img{
      display: flex;

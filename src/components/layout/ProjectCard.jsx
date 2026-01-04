@@ -1,11 +1,12 @@
 import landingpageimg from '../../assets/landingpagedummy.png'
 import '../style/ProjectCard.css'
-export default function ProjectCard(){
+export default function ProjectCard({title,description}){
     return(
-        <div className="project-card">
-            <h3 className="title">Project Machine Learning</h3>
-            <img src={landingpageimg} className="project-card-img"/>
-            <p className="project-description"> Some text here</p>
-        </div>
+        <article className="project-card">
+            <h3 className="title">{title}</h3>
+            <div className='project-card-body'>
+                <p className="project-description">{description} </p>
+            </div>
+        </article>
     )
 }
