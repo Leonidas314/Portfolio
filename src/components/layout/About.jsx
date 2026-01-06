@@ -3,7 +3,7 @@ import '../style/About.css'
 export default function About() {
     return(
         <div className="about-main-container">
-            <h1>About Me</h1>
+            
             <div className="about-content-div" id="about-img-container">
                 <ProfileImage/> 
 
