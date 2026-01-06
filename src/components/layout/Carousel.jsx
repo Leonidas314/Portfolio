@@ -15,10 +15,6 @@ export default function Carousel({index}) {
         <section className="carousel-slide"><Projects /></section>
         <section className="carousel-slide"><Skills /></section>
       </div>
-    <p style={{ position: "fixed", top: 80, left: 20 }}>
-      index: {index}
-    </p>
-    
     </div>
   )
 }

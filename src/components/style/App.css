@@ -8,12 +8,13 @@
     display: flex;
     flex-direction: column;
     background: #0F2027;  /* fallback for old browsers */
-    background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);
+    background-image: radial-gradient( circle farthest-corner at -24.7% -47.3%,  rgba(6,130,165,1) 0%, rgba(34,48,86,1) 66.8%, rgba(15,23,42,1) 100.2% );
     background: -webkit-linear-gradient(to top, #4e2a67, #261e64, #0f1227);  /* Chrome 10-25, Safari 5.1-6 */
     overflow-x: hidden;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 50;
     font-style: normal;
+    color: antiquewhite;
     /*background-image: linear-gradient(to top, #09203f 0%, #01080e 100%);*/
 }
