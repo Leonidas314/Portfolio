@@ -8,9 +8,8 @@
     display: flex;
     flex-direction: column;
     background: #0F2027;  /* fallback for old browsers */
-    
+    background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);
     background: -webkit-linear-gradient(to top, #4e2a67, #261e64, #0f1227);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #4e2a67, #261e64, #0f1227); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     overflow-x: hidden;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;

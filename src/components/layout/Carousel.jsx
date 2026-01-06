@@ -1,11 +1,9 @@
-import { useState } from "react"
-import AboutMe from "./AboutMe"
+import About from "./About"
 import Projects from "./Projects"
-import Formation from "./Formation"
-import "./Carousel.css"
+import Skills from "./Skills"
+import "../style/Carousel.css"
 
-export default function Carousel() {
-  const [index, setIndex] = useState(0)
+export default function Carousel({index}) {
 
   return (
     <div className="carousel-container">
@@ -13,16 +11,14 @@ export default function Carousel() {
         className="carousel-track"
         style={{ transform: `translateX(-${index * 100}vw)` }}
       >
-        <section className="carousel-slide"><AboutMe /></section>
+        <section className="carousel-slide"><About/></section>
         <section className="carousel-slide"><Projects /></section>
-        <section className="carousel-slide"><Formation /></section>
+        <section className="carousel-slide"><Skills /></section>
       </div>
-
-      <div className="carousel-controls">
-        <button onClick={() => setIndex(0)}>About Me</button>
-        <button onClick={() => setIndex(1)}>Projects</button>
-        <button onClick={() => setIndex(2)}>Formation</button>
-      </div>
+    <p style={{ position: "fixed", top: 80, left: 20 }}>
+      index: {index}
+    </p>
+    
     </div>
   )
 }

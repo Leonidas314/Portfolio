@@ -1,13 +1,9 @@
-.Header{
+.header{
     width: 100vw;
     height: 20vh;
     color: antiquewhite;
     display: flex;
     flex-direction: row;
-}
-.header-text{
-    width: 100vw;
-    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
@@ -15,3 +11,4 @@
     font-size: larger;
     font-weight: 200;
 }
+
