@@ -1,15 +1,16 @@
 import '../style/Header.css'
-export default function Header({ index, setIndex }) {
+import { motion, useTransform } from "framer-motion"
+export default function Header({ index, setIndex,scrollProgress }) {
   const items = ["About", "Projects", "Formation"]
-
+   const glowX = useTransform(
+    scrollProgress,
+    [0, 1],
+    [0, 2 * 160] // 160px ≈ ancho + gap
+  )
   return (
     <header className="header">
       <nav className="nav">
-        <span
-          className="nav-glow"
-          style={{ transform: `translateX(${index * 100}%)` }}
-        />
-
+      
         {items.map((label, i) => (
           <button
             key={label}
@@ -19,6 +20,10 @@ export default function Header({ index, setIndex }) {
             {label}
           </button>
         ))}
+        <motion.div
+          className="header-glow"
+          style={{ x: glowX }}
+        />
       </nav>
     </header>
   )

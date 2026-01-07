@@ -1,9 +1,13 @@
 import '../style/Body.css'
+import { forwardRef } from 'react';
 import Carousel from './Carousel';
-export default function Body({index}){
-    return(
-        <div className="body-container">
-            <Carousel index={index}/>
-        </div>
-    );
+
+const Body = ({ index, carouselRef }) => {
+  return (
+    <main className="body-container">
+      <Carousel index={index} carouselRef={carouselRef} />
+    </main>
+  )
 }
+
+export default Body
