@@ -1,0 +1,14 @@
+.underglow{
+   
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+
+  height: 3px;
+  width: 80px;
+
+  background: cyan;
+  border-radius: 999px;
+
+  filter: blur(6px);
+}
