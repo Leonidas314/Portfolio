@@ -5,7 +5,7 @@ import { useState, useRef } from 'react'
 import { useScroll } from 'framer-motion'
 import Header from './components/layout/Header'
 import Body from './components/layout/Body'
-
+import Underglow from './components/layout/Underglow'
 function App() {
 
   const [index, setIndex] = useState(0)
@@ -18,6 +18,7 @@ function App() {
   return (
     <div className='app'>
       <Header setIndex={setIndex} scrollProgress={scrollXProgress}/>
+      <Underglow scrollProgress={scrollXProgress}/>
       <Body index={index} carouselRef={carouselRef}/>
     </div>
   );

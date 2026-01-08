@@ -1,10 +1,10 @@
 import '../style/Body.css'
-import { forwardRef } from 'react';
 import Carousel from './Carousel';
-
+import Underglow from './Underglow';
 const Body = ({ index, carouselRef }) => {
   return (
     <main className="body-container">
+      <Underglow index={index} underglowRef={carouselRef}></Underglow>
       <Carousel index={index} carouselRef={carouselRef} />
     </main>
   )
