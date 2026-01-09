@@ -17,8 +17,7 @@ function App() {
     
   return (
     <div className='app'>
-      <Header setIndex={setIndex} scrollProgress={scrollXProgress}/>
-      <Underglow scrollProgress={scrollXProgress}/>
+      <Header index={index} setIndex={setIndex} scrollProgress={scrollXProgress}/>
       <Body index={index} carouselRef={carouselRef}/>
     </div>
   );

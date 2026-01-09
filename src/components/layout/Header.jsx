@@ -1,5 +1,6 @@
 import '../style/Header.css'
-export default function Header({ index, setIndex }) {
+import Underglow from './Underglow'
+export default function Header({ index, setIndex , scrollProgress}) {
   
   const items = ["About", "Projects", "Formation"]
   
@@ -16,8 +17,10 @@ export default function Header({ index, setIndex }) {
             {label}
           </button>
         ))}
+        <Underglow scrollProgress={scrollProgress} />
         
       </nav>
+
     </header>
   )
 }

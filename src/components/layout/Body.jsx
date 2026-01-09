@@ -4,7 +4,7 @@ import Underglow from './Underglow';
 const Body = ({ index, carouselRef }) => {
   return (
     <main className="body-container">
-      <Underglow index={index} underglowRef={carouselRef}></Underglow>
+      <Underglow  scrollProgress={carouselRef}></Underglow>
       <Carousel index={index} carouselRef={carouselRef} />
     </main>
   )

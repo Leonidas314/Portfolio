@@ -1,10 +1,25 @@
 import "../style/Underglow.css"
-import { motion } from "framer-motion"
+import { motion, useTransform } from "framer-motion"
+
 export default function Underglow({scrollProgress}){
    
-  return(
-    <div className="underglow-continer">
-      <motion.div className="underglow" style={{scaleX : scrollProgress}}/>
-    </div>
+  // 🔒 Guardia dura
+  if (!scrollProgress || typeof scrollProgress.get !== "function") {
+    return null
+  }
+
+  // Ajustá este valor al ancho total que debe recorrer el underline
+  const underlineX = useTransform(
+    scrollProgress,
+    [0, 1],
+    [0,240] // ejemplo: 3 secciones → 0%, 100%, 200%
+  )
+
+  return (
+    <motion.div
+      id="underline"
+      layoutId="underline"
+      style={{ x: underlineX }}
+    />
   )
 }
