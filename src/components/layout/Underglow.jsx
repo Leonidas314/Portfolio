@@ -1,9 +1,9 @@
 import "../style/Underglow.css"
-import { motion, useTransform } from "framer-motion"
-
-export default function Underglow({scrollProgress}){
+import { motion, useMotionValue, useSpring , useTransform} from "framer-motion"
+import { useLayoutEffect } from "react"
+export default function Underglow({x}){
    
-  // 🔒 Guardia dura
+  /* 🔒 Guardia dura
   if (!scrollProgress || typeof scrollProgress.get !== "function") {
     return null
   }
@@ -12,7 +12,7 @@ export default function Underglow({scrollProgress}){
   const underlineX = useTransform(
     scrollProgress,
     [0, 1],
-    [125,900] // ejemplo: 3 secciones → 0%, 100%, 200%
+    [elementPosition,1400] // ejemplo: 3 secciones → 0%, 100%, 200%
   )
   const scaleX = useTransform(//visual width variation
     scrollProgress,
@@ -41,11 +41,23 @@ export default function Underglow({scrollProgress}){
     ]
   )
 
+  const x2 = useMotionValue(0)
+
+  const springX = useSpring(x, {
+    stiffness: 400,
+    damping: 35
+  })
+
+  useLayoutEffect(() => {
+    x.set(elementPosition)
+  }, [elementPosition])
+  */
   return (
     <motion.div
       id="underline"
+      className="underglow"
       layoutId="underline"
-      style={{ x: underlineX }}
+       style={{ x }}
     />
   )
 }
