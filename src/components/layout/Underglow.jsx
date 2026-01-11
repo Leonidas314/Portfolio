@@ -1,13 +1,15 @@
 import "../style/Underglow.css"
 import { motion, useMotionValue, useSpring , useTransform} from "framer-motion"
-import { useLayoutEffect } from "react"
-export default function Underglow({x}){
-   
-  /* 🔒 Guardia dura
+import { useEffect, useLayoutEffect } from "react"
+export default function Underglow({firstRender,x,scrollProgress}){
+  useEffect(()=>{
+    console.log(firstRender)
+  },[])
+  // 🔒 Guardia dura
   if (!scrollProgress || typeof scrollProgress.get !== "function") {
     return null
   }
-
+  /*
   // Ajustá este valor al ancho total que debe recorrer el underline
   const underlineX = useTransform(
     scrollProgress,
@@ -57,7 +59,7 @@ export default function Underglow({x}){
       id="underline"
       className="underglow"
       layoutId="underline"
-       style={{ x }}
+       style={{ x  }}
     />
   )
 }

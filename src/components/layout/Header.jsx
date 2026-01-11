@@ -6,7 +6,7 @@ export default function Header({ index, setIndex , scrollProgress}) {
   
   const items = ["About", "Projects", "Formation"]
   const buttonRefs = useRef([])
-  //const [elementPosition, setElementPosition] = useState(0)
+  const [firstButton, setFirstButtonX] = useState(0)
   const [positions, setPositions] = useState([])
   const underlineX = useTransform(
   scrollProgress,
@@ -23,6 +23,18 @@ export default function Header({ index, setIndex , scrollProgress}) {
     behavior: "smooth"
   })
 }
+useEffect(()=>{
+  setFirstButtonX(1)
+  console.log(firstButton)
+},[])
+useLayoutEffect(() => {
+    const firstButton = buttonRefs.current[0]
+    if (!firstButton) return
+
+    const rect = firstButton.getBoundingClientRect()
+    setFirstButtonX(rect.left)
+  }, [])
+
 useEffect(() => {
   const section = Math.round(scrollProgress.get() * (items.length - 1))
   setIndex(section)
@@ -54,7 +66,7 @@ useEffect(() => {
             {label}
           </button>
         ))}
-        <Underglow x={underlineX}/>
+        <Underglow firstRender={firstButton} x={underlineX} scrollProgress={scrollProgress}/>
         
       </nav>
 
