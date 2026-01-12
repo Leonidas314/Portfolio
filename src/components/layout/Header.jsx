@@ -1,72 +1,85 @@
 import '../style/Header.css'
 import Underglow from './Underglow'
 import { useRef, useLayoutEffect, useState , useEffect } from "react"
-import { useTransform } from 'framer-motion'
+import { useTransform  } from 'framer-motion'
+import { useMotionValue } from 'framer-motion'
 export default function Header({ index, setIndex , scrollProgress}) {
   
   const items = ["About", "Projects", "Formation"]
-  const buttonRefs = useRef([])
   const [firstButton, setFirstButtonX] = useState(0)
-  const [positions, setPositions] = useState([])
-  const underlineX = useTransform(
+  const textCenters = useRef([]) // number[]
+  const baseX = useMotionValue(0)
+  const labelRefs = useRef([])
+  const navRef = useRef(null)
+
+  const scrollOffset = useTransform(
   scrollProgress,
   [0, 1],
-  positions.length
-    ? [positions[0], positions.at(-1)]
+  textCenters.current.length
+    ? [textCenters.current[0], textCenters.current.at(-1)]
     : [0, 0]
   )
+
+  const underlineX = useTransform(
+    [baseX, scrollOffset],
+    ([x, scrollX]) => scrollX || x
+  )
+  
   const handleClick = (i) => {
-  setIndex(i)
+    setIndex(i)
+    window.scrollTo({
+      left: i * window.innerWidth,
+      behavior: "smooth"
+    })
+  }
 
-  window.scrollTo({
-    left: i * window.innerWidth,
-    behavior: "smooth"
-  })
-}
-useEffect(()=>{
-  setFirstButtonX(1)
-  console.log(firstButton)
-},[])
-useLayoutEffect(() => {
-    const firstButton = buttonRefs.current[0]
-    if (!firstButton) return
+  useLayoutEffect(() => {
+    const navRect = navRef.current.getBoundingClientRect()
 
-    const rect = firstButton.getBoundingClientRect()
-    setFirstButtonX(rect.left)
+    textCenters.current = labelRefs.current.map(label => {
+      const rect = label.getBoundingClientRect()
+      return rect.left + rect.width / 2 - navRect.left
+    })
   }, [])
 
-useEffect(() => {
-  const section = Math.round(scrollProgress.get() * (items.length - 1))
-  setIndex(section)
-}, [scrollProgress])
 
- useLayoutEffect(() => {
-  if (!buttonRefs.current.length) return
+  useLayoutEffect(() => {
+    const label = labelRefs.current[index]
+    const nav = navRef.current
+    if (!label || !nav) return
 
-  const parentRect = buttonRefs.current[0].parentElement.getBoundingClientRect()
+    const labelRect = label.getBoundingClientRect()
+    const navRect = nav.getBoundingClientRect()
 
-  const xs = buttonRefs.current.map((el) => {
-    const rect = el.getBoundingClientRect()
-    return rect.left - parentRect.left + rect.width / 2
-  })
+    const centerX =
+      labelRect.left +
+      labelRect.width / 2 -
+      navRect.left
 
-  setPositions(xs)
-}, [])
+    baseX.set(centerX)
+  }, [index])
+
+
   return (
     <header className="header">
-      <nav className="nav">
+      <nav className="nav" ref={navRef}>
       
         {items.map((label, i) => (
-          <button
-            key={label}
-            className={`nav-item ${index === i ? "active" : ""}`}
-            ref={(el) => (buttonRefs.current[i] = el)}
-            onClick={()=>handleClick(i)}
+        <button
+          key={label}
+          className={`nav-item ${index === i ? "active" : ""}`}
+          onClick={() => handleClick(i)}
+        >
+          <span
+            className="nav-label"
+            ref={(el) => (labelRefs.current[i] = el)}
           >
             {label}
-          </button>
-        ))}
-        <Underglow x={underlineX} scrollProgress={scrollProgress}/>
+          </span>
+        </button>
+      ))}
+
+      <Underglow x={underlineX} scrollProgress={scrollOffset}/>
         
       </nav>
 

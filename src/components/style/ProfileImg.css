@@ -1,9 +1,7 @@
 .profile-image{
     display: flex;
     width: 12vw;
-    mim-width: 10vw;
     height:12vw;
-    mim-height: 10vw;
     object-fit: cover;
     box-shadow: 1px 10px 24px 8px rgba(0,0,0,0.79);
     -webkit-box-shadow: 1px 10px 24px 8px rgba(0,0,0,0.79);
