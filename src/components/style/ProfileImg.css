@@ -5,6 +5,8 @@
     height:12vw;
     mim-height: 10vw;
     object-fit: cover;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    box-shadow: 1px 10px 24px 8px rgba(0,0,0,0.79);
+    -webkit-box-shadow: 1px 10px 24px 8px rgba(0,0,0,0.79);
+    -moz-box-shadow: 1px 10px 24px 8px rgba(0,0,0,0.79);
     border-radius: 50%;
 }

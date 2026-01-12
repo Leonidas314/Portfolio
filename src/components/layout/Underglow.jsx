@@ -1,10 +1,8 @@
 import "../style/Underglow.css"
 import { motion, useMotionValue, useSpring , useTransform} from "framer-motion"
 import { useEffect, useLayoutEffect } from "react"
-export default function Underglow({firstRender,x,scrollProgress}){
-  useEffect(()=>{
-    console.log(firstRender)
-  },[])
+export default function Underglow({x,scrollProgress}){
+  
   // 🔒 Guardia dura
   if (!scrollProgress || typeof scrollProgress.get !== "function") {
     return null

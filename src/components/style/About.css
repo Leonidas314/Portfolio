@@ -11,10 +11,15 @@
     display: flex;
     flex-direction: row;
 
-    /* Glass effect */
-    background: rgba(255, 255, 255, 0.06);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    /* Glass effect  rgba(255, 255, 255, 0.06)*/
+    background: linear-gradient(
+        to right top,
+        rgba(0, 0, 0, 0.65),
+        rgba(255, 255, 255, 0.05)
+    );
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 
     /* Separación del fondo */
     border: 1px solid rgba(255, 255, 255, 0.12);
@@ -22,7 +27,7 @@
 
     /* Profundidad */
     box-shadow:
-        0 8px 30px rgba(0, 0, 0, 0.6);
+        0 8px 30px rgba(52, 52, 52, 0.6);
 
     color: #e5e5e5
 }

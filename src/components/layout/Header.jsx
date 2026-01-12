@@ -66,7 +66,7 @@ useEffect(() => {
             {label}
           </button>
         ))}
-        <Underglow firstRender={firstButton} x={underlineX} scrollProgress={scrollProgress}/>
+        <Underglow x={underlineX} scrollProgress={scrollProgress}/>
         
       </nav>
 
