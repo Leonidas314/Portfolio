@@ -1,12 +1,13 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
 .header {
   width: 100vw;
   height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Oxanium', 'Montserrat', sans-serif;
+  font-family:'Zalando', 'Montserrat', sans-serif;
 }
 
 
@@ -25,7 +26,7 @@
   font-size: 2rem;
   font-weight: 600;
   letter-spacing: 0.08em;
-  color: #cfd8ff;
+  color: aliceblue;
   text-align: center;
   transition: color 0.25s ease, text-shadow 0.25s ease;
 }

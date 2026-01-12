@@ -10,6 +10,21 @@
     height: 50vh;
     display: flex;
     flex-direction: row;
+
+    /* Glass effect */
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    /* Separación del fondo */
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+
+    /* Profundidad */
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.6);
+
+    color: #e5e5e5
 }
 
 #about-content-div{
@@ -19,6 +34,7 @@
     margin-top: 1rem;
     font-size: 1.2rem;
     font-weight: 275;
+    padding-left: 1em;
 }
 
 #about-img-container{
@@ -30,5 +46,4 @@
 }
 #description{
     align-items: flex-start;
-    padding-right: 2rem;
 }
