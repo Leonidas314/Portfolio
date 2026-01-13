@@ -1,6 +1,6 @@
 .project-card {
-  width: 320px;
-  height: 220px;
+  width: 25vw;
+  height: 35vh;
   perspective: 1000px;
   cursor: pointer;
 }
@@ -19,6 +19,9 @@
   inset: 0;
   backface-visibility: hidden;
   border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .project-card-front {
@@ -31,4 +34,10 @@
   transform: rotateY(180deg);
   background-size: cover;
   background-position: center;
+}
+
+.project-description{
+  font-weight: 400 ;
+  text-align: center;
+  margin-top: 1rem;
 }

@@ -20,7 +20,7 @@ export default function ProjectCard({ title, description, image }) {
       >
         {/* Frente */}
         <div className="project-card-front">
-          <h3 className="title">{title}</h3>
+          <h2 className="title">{title}</h2>
           <p className="project-description">{description}</p>
         </div>
 
