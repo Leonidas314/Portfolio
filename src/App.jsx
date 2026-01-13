@@ -5,7 +5,6 @@ import { useState, useRef } from 'react'
 import { useScroll } from 'framer-motion'
 import Header from './components/layout/Header'
 import Body from './components/layout/Body'
-import Underglow from './components/layout/Underglow'
 function App() {
 
   const [index, setIndex] = useState(0)
