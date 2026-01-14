@@ -2,9 +2,16 @@ import '../style/ProjectCard.css'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
-export default function ProjectCard({ title, description, image }) {
+export default function ProjectCard({ title, description, image, badgets=[] }) {
   const [flipped, setFlipped] = useState(false)
-  
+  const badgetMap = {
+        react:"devicon-react-original-wordmark"
+        ,tensorflow :"devicon-tensorflow-original-wordmark" 
+        ,flask :"devicon-flask-original" 
+        ,python :"devicon-python-plain" 
+        ,docker :"devicon-docker-plain" 
+        ,sqlite :"devicon-sqlite-plain"
+    }
   return (
    <article className="project-card">
       <motion.div
@@ -22,6 +29,15 @@ export default function ProjectCard({ title, description, image }) {
         <div className="project-card-front">
           <h2 className="title">{title}</h2>
           <p className="project-description">{description}</p>
+          
+          <ul>
+            {badgets.map(b => (
+              <li key={b}>
+                <i className={`devicon-${b}-plain`}></i>
+              </li>
+            ))}
+          </ul>          
+          
         </div>
 
         {/* Dorso */}
