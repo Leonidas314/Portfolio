@@ -3,8 +3,6 @@
   height: 35vh;
   perspective: 1000px;
   cursor: pointer;
-  text-decoration: none;
-
 }
 
 .project-card-inner {
@@ -30,6 +28,8 @@
   background: #0b0b0b;
   color: white;
   padding: 1.2rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .project-card-back {
@@ -41,7 +41,7 @@
   position:relative;
   display: inline-block;
 }
-.title::after{
+.title::after , #badget-header::after{
   content:"";
   position:absolute;
   left: 0;
@@ -56,7 +56,7 @@
   transform-origin: center;
   transition: transform 250ms ease-out;
 }
-.project-card:hover .title::after {
+.project-card:hover .title::after , .project-card:hover #badget-header::after  {
   transform: scaleX(1);
   box-shadow: 0 0 6px currentColor;
 
@@ -66,4 +66,24 @@
   font-weight: 400 ;
   text-align: center;
   margin-top: 1rem;
+}
+
+#badget-header{
+  margin-top: 1rem;
+  border-bottom: 1px solid currentColor;
+  margin-bottom: 2px;
+  position:relative;
+  display: inline-block;
+}
+
+.badget-list{
+  list-style: none;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.badget-list  i {
+  font-size: 2vw;
 }
