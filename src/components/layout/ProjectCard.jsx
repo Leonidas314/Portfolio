@@ -29,11 +29,11 @@ export default function ProjectCard({ title, description, image, badgets=[] }) {
         <div className="project-card-front">
           <h2 className="title">{title}</h2>
           <p className="project-description">{description}</p>
-          <h3 id='badget-header'>Techs and frameworks</h3>
+          <h2 id='badget-header'>Techs and frameworks</h2>
           <ul className='badget-list'>
             {badgets.map(b => (
               <li key={b}>
-                <i className={`devicon-${b}-plain`}></i>
+                <i className={`devicon-${b}-plain-wordmark`}></i>
               </li>
             ))}
           </ul>          

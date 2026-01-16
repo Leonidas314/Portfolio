@@ -69,11 +69,9 @@
 }
 
 #badget-header{
-  margin-top: 1rem;
-  border-bottom: 1px solid currentColor;
-  margin-bottom: 2px;
   position:relative;
   display: inline-block;
+  font-size: 1.2em;
 }
 
 .badget-list{
@@ -85,5 +83,5 @@
   gap: 1rem;
 }
 .badget-list  i {
-  font-size: 2vw;
+  font-size: 3vw;
 }
