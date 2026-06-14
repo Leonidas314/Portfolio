@@ -1,25 +1,17 @@
-
-import './components/style/reset.css'
-import './components/style/App.css'
-import { useState, useRef } from 'react'
-import { useScroll } from 'framer-motion'
-import Header from './components/layout/Header'
-import Body from './components/layout/Body'
+import "./components/style/App.css"
+import Hero from "./components/layout/Hero";
+import Navbar from "./components/layout/Navbar";
+import Skills from "./components/layout/Skills";
 function App() {
-
-  const [index, setIndex] = useState(0)
-  const carouselRef = useRef(null)
-
-  const { scrollXProgress } = useScroll({
-    container: carouselRef
-  })
-    
   return (
-    <div className='app'>
-      <Header index={index} setIndex={setIndex} scrollProgress={scrollXProgress}/>
-      <Body index={index} carouselRef={carouselRef}/>
+    <div className="app-container">
+      <Navbar/>
+      <main>
+        <Hero />
+        <Skills />
+      </main>
     </div>
   );
 }
 
-export default App
+export default App;

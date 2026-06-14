@@ -1,21 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+html, body, #root {
+  height: 100%;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-
-
-.app{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background:
-    radial-gradient(circle at top, rgba(255,255,255,0.1), transparent),
-    linear-gradient(to bottom, #111, #000);
-    overflow-x: hidden;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 50;
-    font-style: normal;
-    color: aliceblue;
-    overflow-y: hidden;
-    /*background-image: linear-gradient(to top, #09203f 0%, #01080e 100%);*/
+.app-container {
+  min-height: 100vh;
+  width: 100%;
 }

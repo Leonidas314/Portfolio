@@ -1,0 +1,39 @@
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+}
+
+#navbar-aux-container {
+    width: 90vw;
+    max-width: 1200px;
+    height: 4.5rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    color: var(--text-primary);
+}
+#navbar-logo {
+    color: var(--text-primary);
+}
+
+#navbar-links a {
+    color: var(--text-primary);
+}
+
+#navbar-links a:hover {
+    color: var(--accent-blue);
+}
+
+

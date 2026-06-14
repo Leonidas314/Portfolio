@@ -1,11 +1,11 @@
 import '../style/Body.css'
-import Carousel from './Carousel';
-const Body = ({ index, carouselRef }) => {
-  return (
-    <main className="body-container">
-      <Carousel index={index} carouselRef={carouselRef} />
-    </main>
-  )
-}
+import Hero from "./Hero"
+export default function Body(){
 
-export default Body
+  return(
+    <div className='body-container'>
+      <Hero/>
+    </div>
+  );
+
+}
