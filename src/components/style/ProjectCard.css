@@ -81,3 +81,54 @@
     transform: rotateY(180deg);
     background-color: #1f2937;
 }
+
+.project-card::after {
+    content: '↻ Click to flip';
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 0.75rem;
+    color: var(--accent-blue);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+}
+
+.project-card:hover::after {
+    opacity: 1;
+}
+
+.project-card:hover .project-card-front {
+    border-color: var(--accent-blue);
+    transition: border-color 0.2s ease;
+}
+
+.title,#badget-header  {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 275;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.2s ease;
+}
+
+.title::after ,#badget-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    transform: none;
+    width: 0%;
+    height: 1px;
+    background: var(--accent-green);
+    transition: width 0.65s ease;
+}
+
+.project-card:hover .title,
+.project-card:hover #badget-header {
+    color: var(--text-primary);
+}
+.project-card:hover .title::after,
+.project-card:hover #badget-header::after {
+    width: 100%;
+}
